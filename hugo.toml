@@ -1,0 +1,88 @@
+baseurl = "http://www.macpiusegelege.com"
+title = "DevOps Odyssey: Navigating the Future of Deployment"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+
+disqusShortname = "yourdiscussshortname"
+
+[markup.highlight]
+style = "github-dark"
+
+[params]
+  author = "Macpius Egelege"
+  info = "DevOps Virtuoso & Full-Stack Maestro"
+  description = "Macpius Egelege Portfolio"
+  keywords = "blog,developer,personal"
+  avatarurl = "images/avatar.jpg"
+  #gravatar = "john.doe@example.com"
+
+  faviconSVG = "/img/favicon.svg"
+  favicon_32 = "/img/favicon-32x32.png"
+  favicon_16 = "/img/favicon-16x16.png"
+
+  since = 2019
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  # customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/johndoe/"
+[[params.social]]
+  name = "Gitlab"
+  icon = "fa-brands fa-gitlab fa-2x"
+  weight = 2
+  url = "https://gitlab.com/johndoe/"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa-brands fa-x-twitter fa-2x"
+  weight = 3
+  url = "https://twitter.com/johndoe/"
+
+# Menu links
+[[menu.main]]
+name = "Projects"
+weight = 1
+identifier = "projects"
+url = "projects/"
+
+[[menu.main]]
+name = "Beyond Code: Automating Infrastructure for Scalable Web Applications"
+parent = "projects"
+weight = 2
+url = "projects/beyond_code/"
+
+[[menu.main]]
+name = "CI/CD Pipeline for a Web Application"
+parent = "projects"
+weight = 3
+url = "projects/ci_cd/"
+
+[[menu.main]]
+name = "Security Automation Project"
+parent = "projects"
+weight = 4
+url = "projects/security_and_automation/"
+
+[[menu.main]]
+  name = "About"
+  weight = 5
+  url = "about/"

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Cloud Infrastructure Project: Multi-Tier Web Application Deployment · DevOps Odyssey: Navigating the Future of Deployment
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Macpius Egelege">
+<meta name="description" content="Objective Link to heading Deploy a scalable, multi-tier web application using a combination of AWS services and Terraform for infrastructure as code (IaC).
+Outcome Link to heading This project demonstrates advanced skills in cloud architecture, infrastructure automation, and the ability to efficiently manage and deploy scalable web applications.
+Steps Link to heading Design Architecture: Outlined a multi-tier architecture, defining separation of concerns among web, application, and database layers for optimal scalability and security.">
+<meta name="keywords" content="blog,developer,personal">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Cloud Infrastructure Project: Multi-Tier Web Application Deployment"/>
+<meta name="twitter:description" content="Objective Link to heading Deploy a scalable, multi-tier web application using a combination of AWS services and Terraform for infrastructure as code (IaC).
+Outcome Link to heading This project demonstrates advanced skills in cloud architecture, infrastructure automation, and the ability to efficiently manage and deploy scalable web applications.
+Steps Link to heading Design Architecture: Outlined a multi-tier architecture, defining separation of concerns among web, application, and database layers for optimal scalability and security."/>
+
+<meta property="og:title" content="Cloud Infrastructure Project: Multi-Tier Web Application Deployment" />
+<meta property="og:description" content="Objective Link to heading Deploy a scalable, multi-tier web application using a combination of AWS services and Terraform for infrastructure as code (IaC).
+Outcome Link to heading This project demonstrates advanced skills in cloud architecture, infrastructure automation, and the ability to efficiently manage and deploy scalable web applications.
+Steps Link to heading Design Architecture: Outlined a multi-tier architecture, defining separation of concerns among web, application, and database layers for optimal scalability and security." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/projects/beyond_code/multi_tier_web_app_dep/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2024-02-20T12:02:16-05:00" />
+<meta property="article:modified_time" content="2024-02-20T12:02:16-05:00" />
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/projects/beyond_code/multi_tier_web_app_dep/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      DevOps Odyssey: Navigating the Future of Deployment
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container page">
+  <article>
+    <header>
+      <h1 class="title">
+        <a class="title-link" href="http://localhost:1313/projects/beyond_code/multi_tier_web_app_dep/">
+          Cloud Infrastructure Project: Multi-Tier Web Application Deployment
+        </a>
+      </h1>
+    </header>
+
+    <h2 id="objective">
+  Objective
+  <a class="heading-link" href="#objective">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Deploy a scalable, multi-tier web application using a combination of AWS services and Terraform for infrastructure as code (IaC).</p>
+<h2 id="outcome">
+  Outcome
+  <a class="heading-link" href="#outcome">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>This project demonstrates advanced skills in cloud architecture, infrastructure automation, and the ability to efficiently manage and deploy scalable web applications.</p>
+<h2 id="steps">
+  Steps
+  <a class="heading-link" href="#steps">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li><strong>Design Architecture:</strong> Outlined a multi-tier architecture, defining separation of concerns among web, application, and database layers for optimal scalability and security.</li>
+<li><strong>Infrastructure as Code with Terraform:</strong> Developed Terraform scripts to provision AWS EC2 instances for the web and application layers, RDS for a managed database solution, and S3 for storage of static assets.</li>
+<li><strong>Automation and Orchestration:</strong> Automated the entire infrastructure setup, ensuring idempotency in deployment scripts to allow for safe, repeatable deployments.</li>
+<li><strong>Security and Network Configuration:</strong> Configured security groups, IAM roles, and VPC settings to ensure a secure, isolated network environment for the application components.</li>
+<li><strong>Monitoring and Management:</strong> Implemented CloudWatch for monitoring the health and performance of the infrastructure, setting up alerts for any critical issues.</li>
+</ul>
+
+  </article>
+</section>
+
+  
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Macpius Egelege 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
